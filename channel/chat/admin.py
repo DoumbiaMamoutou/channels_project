@@ -8,7 +8,7 @@ class ChatAdmin(admin.ModelAdmin):
     list_display = ('user', 'message', 'status', 'date_add', 'date_upd',)
     list_filter = ('status', 'date_add',)
     search_fields = ('message',)
-    datehierachie = ('date_add',)
+    date_hierarchy = ('date_add',)
     list_perpage = 10
 
 admin.site.register(models.Chat, ChatAdmin)
